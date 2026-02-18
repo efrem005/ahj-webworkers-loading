@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Новости мира кино</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Новости мира кино</h1>
+            <button class="refresh-btn" disabled>Обновить</button>
+        </header>
+        
+        <main>
+            <!-- Состояние загрузки (loading.png) -->
+            <div id="loadingState" class="state loading-state">
+                <!-- <div class="loading-text">Загрузка новостей...</div> -->
+                <ul class="skeleton-list" aria-hidden="true">
+                    <li class="skeleton-item">
+                        <div class="skeleton-line skeleton-title"></div>
+                        <div class="skeleton-line skeleton-date"></div>
+                    </li>
+                    <li class="skeleton-item">
+                        <div class="skeleton-line skeleton-title"></div>
+                        <div class="skeleton-line skeleton-date"></div>
+                    </li>
+                    <li class="skeleton-item">
+                        <div class="skeleton-line skeleton-title"></div>
+                        <div class="skeleton-line skeleton-date"></div>
+                    </li>
+                </ul>
+            </div>
+            
+            <!-- Состояние с данными -->
+            <div id="contentState" class="state content-state hidden">
+                <ul id="newsList" class="news-list"></ul>
+            </div>
+            
+            <!-- Состояние ошибки (loading-2.png) -->
+            <div id="errorState" class="state error-state hidden">
+                <div class="error-icon">⚠️</div>
+                <div class="error-title">Не удалось загрузить данные</div>
+                <div class="error-message">Проверьте подключение и обновите страницу</div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
