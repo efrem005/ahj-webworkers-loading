@@ -3,7 +3,7 @@ import './styles.css';
 // Регистрация Service Worker
 if ('serviceWorker' in navigator) {
     window.addEventListener('load', () => {
-        navigator.serviceWorker.register('sw.js')
+        navigator.serviceWorker.register('./service-worker.js')
             .then(_reg => console.log('Service Worker зарегистрирован'))
             .catch(_err => console.log('Service Worker ошибка регистрации'));
     });
